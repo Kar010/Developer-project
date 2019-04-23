@@ -1,0 +1,110 @@
+header {
+  background-image: url("../img/download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  position: relative; // matavimo vienetas vh
+  color: #fff;
+
+  // .navbar-sticky {
+  //   +.container {
+  //     padding-top: calc(20% + 80px);
+  //   }
+  // }
+
+  > .container {
+    position: relative;
+    z-index: 2;
+    // h1{
+    // font-size: 55px;
+    // font-weight: 800;
+    color: white;
+    white-space: nowrap;
+    padding-top: 20%;
+    // textas nepriklausomai nuo kokiam dydije yra nelustu i nauja eilute
+  }
+}
+
+.illustration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  svg {
+    fill: white;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.scroll-item {
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  margin-left: -20px;
+  left: 50%;
+  bottom: 28px;
+  animation-name: sokinejantis-burbuliukas;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+// veikia ant destop
+@media (min-width: 992px){
+
+     .navbar-sticky {
+    +.container {
+      padding-top: calc(20% + 80px);
+    }
+  }
+  > .container {
+    padding-top: 20px;
+    h1 {
+      font-size: 55px;
+
+    }
+  }
+}
+
+
+@keyframes sokinejantis-burbuliukas {
+  0% {
+    transform: scale(1,1) translateY(0);
+  }
+
+  10% {
+    transform: scale(1.1,.9) translateY(0);
+  }
+
+  30% {
+    transform: scale(.9,1.1) translateY(-100px);
+  }
+
+  50% {
+    transform: scale(1.05,.95) translateY(0);
+  }
+
+  57% {
+    transform: scale(1,1) translateY(-7px);
+  }
+
+  64% {
+    transform: scale(1,1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1,1) translateY(0);
+  }
+}

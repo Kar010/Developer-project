@@ -1,0 +1,39 @@
+@import 'bootstrap/bootstrap.scss';
+@import 'variables.scss';
+@import 'sections/header.scss';
+@import 'sections/_navbar.scss';
+@import '1.scss';
+@import 'sections/services.scss';
+@import 'sections/footer.scss';
+@import 'sections/about.scss';
+@import 'sections/atoms/forms.scss';
+@import 'sections/blog.scss';
+@import 'sections/contacts.scss';
+// @import 'style.scss';
+// @import 'sections/atoms/Button.scss';
+// neveikia
+.maket1 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  svg {
+    fill: #F7F7F7;
+  }
+}
+
+
+
+.bandom{
+  overflow: hidden;
+  background: #FF6B6C;
+  position: static;
+  z-index: -3;
+  clip-path:polygon(32% 48%, 0 31%, 100% 30%);
+  margin-bottom:-90vw;
+  height: 381vh;
+  margin-top: -118vh;
+
+}
